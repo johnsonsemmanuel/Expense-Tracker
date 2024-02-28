@@ -1,0 +1,75 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vbmV5fGVufDB8fDB8fHww');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.expense-tracker {
+    background-color: rgba(255,239,213, 0.8); /* Semi-transparent white background */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.expense-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-expense-btn, .reset-btn {
+    padding: 10px 30px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-expense-btn:hover, .reset-btn:hover {
+    background-color: darkred;
+}
+
+.total-expenses {
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center;
+}
+
+.total-expenses h2 {
+    font-size: 24px; /* Increase the font size */
+    margin: 0; /* Remove default margin */
+}
+
+.quote {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-column {
+    width: 200px;
+}
+
+.learn-spend {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+}
