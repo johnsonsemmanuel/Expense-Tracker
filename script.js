@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const splitBillBtn = document.getElementById('splitBillBtn');
     const splitResult = document.getElementById('splitResult');
     const numPeopleInput = document.getElementById('numPeople');
+    const timerDisplay = document.getElementById('timer');
+    const dateDisplay = document.getElementById('date');
 
     let totalExpense = 0;
 
@@ -78,4 +80,29 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateTotalExpense() {
         totalExpenses.textContent = `Total Expense: $${totalExpense.toFixed(2)}`;
     }
+
+    // Function to update the timer every second
+    function updateTimer() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        timerDisplay.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    // Function to update the date
+    function updateDate() {
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = now.toLocaleDateString('en-US', options);
+        dateDisplay.textContent = formattedDate;
+    }
+
+    // Call the update functions initially
+    updateTimer();
+    updateDate();
+
+    // Update timer and date every second
+    setInterval(updateTimer, 1000);
+    setInterval(updateDate, 1000);
 });
