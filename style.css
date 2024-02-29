@@ -30,7 +30,20 @@ body {
     margin-bottom: 20px;
 }
 
-.add-expense-btn, .reset-btn {
+.add-expense-btn {
+    padding: 10px 30px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn{
     padding: 10px 30px;
     background-color: red;
     color: #fff;
@@ -44,7 +57,7 @@ body {
 }
 
 .add-expense-btn:hover, .reset-btn:hover {
-    background-color: darkred;
+    background-color: green;
 }
 
 .total-expenses {
@@ -54,8 +67,8 @@ body {
 }
 
 .total-expenses h2 {
-    font-size: 24px; /* Increase the font size */
-    margin: 0; /* Remove default margin */
+    font-size: 20px; /* Increase the font size */
+    margin: 10px; /* Remove default margin */
 }
 
 .quote {
